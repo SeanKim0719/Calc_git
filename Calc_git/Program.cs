@@ -4,12 +4,13 @@ using System.Security.AccessControl;
 
 class Program
 {
+    int a, b;
     static void Main(string[] args)
     {
         Calculator calc = new Calculator();
         calc.display();
         Console.WriteLine("git");
-        calc.func_mult();
+        calc.CalcMulti(1,2);
     }
 }
 
@@ -25,8 +26,8 @@ class Calculator
     {
         Console.WriteLine("Calculate is booting");
     }
-    public void func_mult()
+    public int CalcMulti(int num1, int num2)
     {
-        Console.WriteLine("Multi is booting");
+        return num1 * num2;
     }
 }
