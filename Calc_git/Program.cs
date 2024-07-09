@@ -7,6 +7,7 @@ class Program
     {
         Calculator calc = new Calculator();
         calc.display();
+        Console.WriteLine("git");
     }
 }
 
