@@ -8,9 +8,6 @@ class Program
     static void Main(string[] args)
     {
         Calculator calc = new Calculator();
-        calc.display();
-        Console.WriteLine("git");
-        calc.CalcMulti(1,2);
     }
 }
 
@@ -19,9 +16,5 @@ class Calculator
     public void display()
     {
         Console.WriteLine("Calculate is booting");
-    }
-    public int CalcMulti(int num1, int num2)
-    {
-        return num1 * num2;
     }
 }
