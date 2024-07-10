@@ -51,4 +51,9 @@ class InterFace
         choice = int.Parse(Console.ReadLine());
         return choice;
     }
+
+    public void Result(int result)
+    {
+        Console.Write("연산 결과는" + result + "입니다.");
+    }
 }
