@@ -58,7 +58,6 @@ class Calculator: FFAO
         return num1 / num2;
     }
 }
-}
 
 class InterFace
 {
