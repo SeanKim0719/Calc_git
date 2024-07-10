@@ -68,6 +68,7 @@ class InterFace
         {
             Console.WriteLine("첫번째 숫자를 입력해주세요 >> ");
             input = Console.ReadLine();
+            나는 버그다;
             return int.Parse(input);
         }
     }
