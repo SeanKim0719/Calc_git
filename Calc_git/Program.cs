@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.Security.AccessControl;
+using Calc_git_memory;
 
 class Program
 {
@@ -14,42 +15,42 @@ class Program
 //the Four Fundamental Arithmetic Operations
 interface FFAO
 {
-    int Add(int num1, int num2);
-    int Sub(int num1, int num2);
-    int Mul(int num1, int num2);
-    int Div(int num1, int num2);
-
+    public int Add(int num1, int num2);
+    public int Sub(int num1, int num2);
+    public int Mul(int num1, int num2);
+    public int Div(int num1, int num2);
 }
 
 class Calculator: FFAO
 {
+    CalcMemory memory = new CalcMemory();
     public void display()
     {
         Console.WriteLine("Calculate is booting");
     }
 
-    int FFAO.Add(int num1, int num2)
+    public int Add(int num1, int num2)
     {
-        return num1 + num2;
+        int result = num1 + num2;
+        memory.SAVE(result);
+        return result;
     }
-    int FFAO.Sub(int num1, int num2)
+    public int Sub(int num1, int num2)
     {
-        return num1 - num2;
+        int result = num1 - num2;
+        memory.SAVE(result);
+        return result;
     }
-    int FFAO.Mul(int num1, int num2)
+    public int Mul(int num1, int num2)
     {
-        return num1 * num2;
+        int result = num1 * num2;
+        memory.SAVE(result);
+        return result;
     }
-    int FFAO.Div(int num1, int num2)
+    public int Div(int num1, int num2)
     {
-        try
-        {
-            return num1 / num2;
-        }
-        catch(DivideByZeroException)
-        {
-            Console.WriteLine("0으로는 나눌 수 없습니다.");
-            return 0;
-        }
+        int result = num1 / num2;
+        memory.SAVE(result);
+        return num1 / num2;
     }
 }
